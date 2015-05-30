@@ -7122,7 +7122,15 @@ table .checkbox input[type="checkbox"] {
   color: #843534;
 }
 body {
-  background-image: url("../images/birdst.png"), linear-gradient(to bottom, #a1dbff 0%, #f0f9ff 100%);
+  background-image: -webkit-linear-gradient(top, #a1dbff 0%, #f0f9ff 100%);
+  background-image: -o-linear-gradient(top, #a1dbff 0%, #f0f9ff 100%);
+  background-image: linear-gradient(to bottom, #a1dbff 0%, #f0f9ff 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa1dbff', endColorstr='#fff0f9ff', GradientType=0);
+}
+#content-wrapper {
+  background-image: url("../images/birdst.png");
   background-repeat: no-repeat;
+  background-position: top left;
   background-size: 100%;
 }
