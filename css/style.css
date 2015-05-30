@@ -7134,3 +7134,33 @@ body {
   background-position: top left;
   background-size: 100%;
 }
+.menu-item-1 {
+  border-top: 3px solid #f00;
+}
+.menu-item-1:hover {
+  background: #f00;
+}
+.menu-item-2 {
+  border-top: 3px solid #0f0;
+}
+.menu-item-2:hover {
+  background: #0f0;
+}
+.menu-item-3 {
+  border-top: 3px solid #00f;
+}
+.menu-item-3:hover {
+  background: #00f;
+}
+.menu-item-4 {
+  border-top: 3px solid #ff0;
+}
+.menu-item-4:hover {
+  background: #ff0;
+}
+.menu-item-5 {
+  border-top: 3px solid #0ff;
+}
+.menu-item-5:hover {
+  background: #0ff;
+}
