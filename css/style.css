@@ -7134,6 +7134,34 @@ body {
   background-position: top left;
   background-size: 100%;
 }
+#page-header {
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* rules for mobile vertical (< 480) */
+  background-image: url("../images/banner432.jpg");
+  height: 114px;
+}
+@media (min-width: 480px) {
+  #page-header {
+    /* rules for tablet (768 > 992) */
+    background-image: url("../images/banner720.jpg");
+    height: 189px;
+  }
+}
+@media (min-width: 992px) {
+  #page-header {
+    /* rules for desktop (992 > 1200) */
+    background-image: url("../images/banner940.jpg");
+    height: 247px;
+  }
+}
+@media (min-width: 1200px) {
+  #page-header {
+    /* rules for large (> 1200) */
+    background-image: url("../images/banner1140.jpg");
+    height: 300px;
+  }
+}
 .navbar-nav > li > a {
   padding-top: 10px;
 }
