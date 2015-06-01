@@ -164,12 +164,20 @@
   </div>
   <?php if (!empty($page['content-bottom'])): ?>
     <div class="row">
-      <section class="col-sm-12" role="complementary">
+      <section class="col-sm-12">
         <?php print render($page['content-bottom']); ?>
       </section>
     </div>
   <?php endif; ?>
 </div>
 <footer class="footer container">
-  <?php print render($page['footer']); ?>
+  <section class="col-md-4 col-sm-12">
+    <?php print render($page['footer_left']); ?>
+  </section>
+  <section class="col-md-4 col-sm-6 col-xs-12">
+    <?php print render($page['footer_center']); ?>
+  </section>
+  <section class="col-md-4 col-sm-6 col-xs-12">
+    <?php print render($page['footer_right']); ?>
+  </section>
 </footer>
