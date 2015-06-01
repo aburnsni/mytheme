@@ -1,0 +1,52 @@
+@border: 5px;
+@color1: #f00;
+@color2: #0f0;
+@color3: #00f;
+@color4: #ff0;
+@color5: #0ff;
+
+.navbar-nav > li > a {
+  padding-top: 15px - @border;
+}
+
+.menu-item-1 {
+  border-top: @border solid @color1;
+  > a {
+    &:hover, &:focus {
+      background: @color1 !important;
+    }
+  }
+}
+
+.menu-item-2 {
+  border-top: @border solid @color2;
+  > a {
+    &:hover, &:focus {
+      background: @color2 !important;
+    }
+  }
+}
+.menu-item-3 {
+  border-top: @border solid @color3;
+  > a {
+    &:hover, &:focus {
+      background: @color3 !important;
+    }
+  }
+}
+.menu-item-4 {
+  border-top: @border solid @color4;
+  > a {
+    &:hover, &:focus {
+      background: @color4 !important;
+    }
+  }
+}
+.menu-item-5 {
+  border-top: @border solid @color5;
+  > a {
+    &:hover, &:focus {
+      background: @color5 !important;
+    }
+  }
+}
