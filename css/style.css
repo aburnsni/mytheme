@@ -7170,6 +7170,7 @@ body {
 }
 .menu-item-1 > a:hover,
 .menu-item-1 > a:focus {
+  color: #eee !important;
   background: #ff0000 !important;
 }
 .menu-item-2 {
@@ -7184,6 +7185,7 @@ body {
 }
 .menu-item-3 > a:hover,
 .menu-item-3 > a:focus {
+  color: #eee !important;
   background: #0000ff !important;
 }
 .menu-item-4 {
