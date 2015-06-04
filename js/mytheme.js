@@ -16,4 +16,3 @@ jQuery(window).load(function () {
     jQuery('body').attr("style", x);
   }
 });
-

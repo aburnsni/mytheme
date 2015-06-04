@@ -1,4 +1,4 @@
-// Insert your styling here.
+// main: ./style.less
 .bg-img(@img) {	background-image: url("@{img}");
 		background-repeat: no-repeat;
 		background-position: top left;
@@ -12,8 +12,8 @@ body { #gradient.vertical(#a1dbff; #f0f9ff;); }
   background-position: center center;
   background-repeat:no-repeat;
   /* rules for mobile vertical (< 480) */
-    background-image:url("http://placehold.it/432x114");
-    height:114px;
+  background-image:url("http://placehold.it/432x114");
+  height:114px;
 
   @media (min-width: @screen-xs-min) {
      /* rules for tablet (768 > 992) */
@@ -29,5 +29,12 @@ body { #gradient.vertical(#a1dbff; #f0f9ff;); }
      /* rules for large (> 1200) */
     background-image:url("http://placehold.it/1140x300");
     height:300px;
+  }
+}
+
+/* Remove background for calendar for/next blocks */
+.view .date-nav-wrapper{
+  .date-prev, .date-next {
+    background:none;
   }
 }

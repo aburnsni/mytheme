@@ -1,3 +1,4 @@
+// main: style.less
 @border: 5px;
 @color1: #f00;
 @color2: #0f0;
@@ -6,11 +7,20 @@
 @color5: #0ff;
 
 .navbar-nav > li > a {
-  padding-top: 15px - @border;
+//  padding-left: 15px - @border;
+  @media (min-width: @screen-sm-min) {
+    padding-top: 15px - @border;
+    padding-left: none;
+  }
+
 }
 
 .menu-item-1 {
-  border-top: @border solid @color1;
+  border-left: @border solid @color1;
+  @media (min-width: @screen-sm-min) {
+    border-left: none;
+    border-top: @border solid @color1;
+  }
   > a {
     &:hover, &:focus {
       color: #eee !important;
@@ -20,7 +30,11 @@
 }
 
 .menu-item-2 {
-  border-top: @border solid @color2;
+  border-left: @border solid @color2;
+  @media (min-width: @screen-sm-min) {
+    border-left: none;
+    border-top: @border solid @color2;
+  }
   > a {
     &:hover, &:focus {
       background: @color2 !important;
@@ -28,7 +42,11 @@
   }
 }
 .menu-item-3 {
-  border-top: @border solid @color3;
+  border-left: @border solid @color3;
+  @media (min-width: @screen-sm-min) {
+    border-left: none;
+    border-top: @border solid @color3;
+  }
   > a {
     &:hover, &:focus {
       color: #eee !important;
@@ -37,7 +55,11 @@
   }
 }
 .menu-item-4 {
-  border-top: @border solid @color4;
+  border-left: @border solid @color4;
+  @media (min-width: @screen-sm-min) {
+    border-left: none;
+    border-top: @border solid @color4;
+  }
   > a {
     &:hover, &:focus {
       background: @color4 !important;
@@ -45,10 +67,32 @@
   }
 }
 .menu-item-5 {
-  border-top: @border solid @color5;
+  border-left: @border solid @color5;
+   @media (min-width: @screen-sm-min) {
+    border-left: none;
+    border-top: @border solid @color5;
+  }
   > a {
     &:hover, &:focus {
       background: @color5 !important;
     }
   }
+}
+/* Add Navbar toggle text for medium size screens */
+.navbar-toggle {
+    .menutitle {
+        display:none;
+    }
+    @media (min-width: @screen-xs-min) {
+        .menutitle {
+            float: left;
+            display: block;
+            margin: 0 10px 0 0;
+            text-transform: uppercase;
+        }
+        .menubars {
+            float:right;
+            margin-top:3px;
+        }
+    }
 }
