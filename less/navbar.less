@@ -5,6 +5,8 @@
 @color3: #00f;
 @color4: #ff0;
 @color5: #0ff;
+@color6: #f0f;
+@color7: #800;
 
 .navbar-nav > li > a {
 //  padding-left: 15px - @border;
@@ -78,6 +80,31 @@
     }
   }
 }
+.menu-item-6 {
+  border-left: @border solid @color6;
+   @media (min-width: @screen-sm-min) {
+    border-left: none;
+    border-top: @border solid @color6;
+  }
+  > a {
+    &:hover, &:focus {
+      background: @color6 !important;
+    }
+  }
+}
+.menu-item-7 {
+  border-left: @border solid @color7;
+   @media (min-width: @screen-sm-min) {
+    border-left: none;
+    border-top: @border solid @color7;
+  }
+  > a {
+    &:hover, &:focus {
+      background: @color7 !important;
+    }
+  }
+}
+
 /* Add Navbar toggle text for medium size screens */
 .navbar-toggle {
     .menutitle {
