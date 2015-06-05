@@ -7255,17 +7255,17 @@ body {
   background: #ff00ff !important;
 }
 .menu-item-7 {
-  border-left: 5px solid #880000;
+  border-left: 5px solid #88ff88;
 }
 @media (min-width: 768px) {
   .menu-item-7 {
     border-left: none;
-    border-top: 5px solid #880000;
+    border-top: 5px solid #88ff88;
   }
 }
 .menu-item-7 > a:hover,
 .menu-item-7 > a:focus {
-  background: #880000 !important;
+  background: #88ff88 !important;
 }
 /* Add Navbar toggle text for medium size screens */
 .navbar-toggle .menutitle {
