@@ -87,19 +87,19 @@
       <?php endif; ?>
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-<div class="menutitle"><?php print t('Menu'); ?></div>
-<div class="menubars">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navbar-collapse">
+<span class="menutitle"><?php print t('Menu'); ?></span>
+<span class="menubars">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
- </div>
+ </span>
      </button>
     </div>
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div id="main-navbar" class="navbar-collapse collapse">
+      <div id="main-navbar" class="main-navbar-collapse navbar-collapse collapse">
         <nav role="navigation">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
