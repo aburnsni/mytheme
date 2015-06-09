@@ -51,3 +51,13 @@ function fleming_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+// Add img-circle class to Video Thumbnails
+
+function fleming_preprocess_image(&$variables) {
+   if(isset($variables['style_name'])) {
+    if($variables['style_name'] == 'gallery_cover_small') {
+     $variables['attributes']['class'][] = "img-circle";
+  }
+ }
+}
