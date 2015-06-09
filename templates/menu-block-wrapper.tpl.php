@@ -27,7 +27,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <span class="visible-xs navbar-brand">Sidebar menu</span>
+      <span class="visible-xs navbar-brand">Department menu</span>
     </div>
     <div class="<?php print $classes; ?> navbar-collapse collapse sidebar-navbar-collapse">
       <?php print render($content); ?>
