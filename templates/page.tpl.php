@@ -124,6 +124,8 @@
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
+<div><h1>Fleming Fulton School</h1></div>
+<div><img src="http://v2.flemingfulton.org.uk/sites/all/themes/fleming/logo.png"></div>
   </header> <!-- /#page-header -->
 
   <div class="row">
