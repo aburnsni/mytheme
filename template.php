@@ -79,7 +79,7 @@ function fleming_menu_link__menu_block__2(array $variables) {
 
 
 
-// Add img-circle class to Video Thumbnails
+// Add img-circle class to Video/Gallery Thumbnails and add Alt text to match Title
 
 function fleming_preprocess_image(&$variables) {
     if(isset($variables['style_name'])) {
