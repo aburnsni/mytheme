@@ -30,11 +30,24 @@ body {
 /* Remove background for calendar for/next blocks */
 
 .view .date-nav-wrapper {
-    .date-prev, .date-next {
-        background: none;
+    .date-nav {
+        padding-bottom:0;
+        .pager {
+            margin:10px 0;
+            .date-prev, .date-next {
+                background: none;
+                position:relative;
+                left:0;
+                right:0;
+            }
+        }
     }
 }
-
+.view-display-id-block_1 {
+    .attachment-after {
+        padding-top:15px;
+    }
+}
 .pane-taxonomy-items-panel-pane-3,
 .pane-taxonomy-items-panel-pane-4 {
     .views-row {
