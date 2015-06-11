@@ -1,18 +1,43 @@
-jQuery(window).resize(function () {
-//jQuery('body').prepend('<div>'+jQuery(window).width()+'</div>');
-  if (parseInt(jQuery(window).width()) < 768) {
-    jQuery('body').removeAttr("style");
-  } else {
-    var x = "padding-top: " + (parseInt(jQuery('#main-navbar').height()) + 10) + "px !important";
-    jQuery('body').attr("style", x);
-  }
-});
+/*global $, jQuery, alert*/
+jQuery(function ($) {
+    "use strict";
 
-jQuery(window).load(function () {
-  if (parseInt(jQuery(window).width()) < 768) {
-    jQuery('body').removeAttr("style");
-  } else {
-    var x = "padding-top: " + (parseInt(jQuery('#main-navbar').height()) + 10) + "px !important";
-    jQuery('body').attr("style", x);
-  }
+    function mouseOver() { $(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown(); }
+
+    function mouseOut() { $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp(); }
+
+    $(window).resize(function () {
+        //$('body').prepend('<div>'+$(window).width()+'</div>');
+        //Set padding-top to allow for various navbar heights
+        if (parseInt($(window).width(), 10) < 768) {
+            $('body').removeAttr("style");
+            //remove auto dropdown from main navbar
+            $('.navbar #main-navbar .dropdown').off('mouseenter mouseleave', mouseOver, mouseOut);
+        } else {
+            var x = "padding-top: " + (parseInt($('#main-navbar').height(), 10) + 10) + "px !important";
+            $('body').attr("style", x);
+
+            //Set navbar drop down on hover
+            $('.navbar #main-navbar .dropdown').hover(mouseOver, mouseOut);
+        }
+    });
+
+    $(window).load(function () {
+        //Set padding-top to allow for various navbar heights
+        if (parseInt($(window).width(), 10) < 768) {
+            $('body').removeAttr("style");
+            //remove auto dropdown from main navbar
+            $('.navbar #main-navbar .dropdown').off('mouseentermouseleave', mouseOver, mouseOut);
+
+        } else {
+            var x = "padding-top: " + (parseInt($('#main-navbar').height(), 10) + 10) + "px !important";
+            $('body').attr("style", x);
+
+            //Set navbar drop down on hover
+            $('.navbar #main-navbar .dropdown').hover(mouseOver, mouseOut);
+        }
+    });
+
+
+
 });
