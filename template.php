@@ -85,9 +85,9 @@ function fleming_preprocess_image(&$variables) {
     if(isset($variables['style_name'])) {
         if($variables['style_name'] == 'gallery_cover_small') {
             $variables['attributes']['class'][] = "img-circle";
-            if(isset($variables['attributes']['title']) {
-                $variables['attributes']['alt'] = $variables['attributes']['title'];
-            }
+        }
+        if(isset($variables['attributes']['title'])) {
+            $variables['attributes']['alt'] = $variables['attributes']['title'];
         }
     }
 }
