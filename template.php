@@ -51,3 +51,19 @@ function mytheme_menu_link(array $variables) {
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+
+// Add gmaps js to front page
+
+function fleming_preprocess_page(&$vars)
+{
+    dpm (arg(0));
+  if($vars['is_front']) {
+    drupal_add_js('https://maps.googleapis.com/maps/api/js?v=3.exp');
+    drupal_add_js(drupal_get_path('theme', 'fleming') . '/js/gmap-block.js');
+  }
+  else if(arg(0)=='contact_us') {
+    drupal_add_js('https://maps.googleapis.com/maps/api/js?v=3.exp');
+    drupal_add_js(drupal_get_path('theme', 'fleming') . '/js/gmap-large.js');
+  }
+}
