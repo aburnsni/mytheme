@@ -135,7 +135,7 @@
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
 
-    <section<?php print $content_column_class; ?>>
+    <div<?php print $content_column_class; ?>>
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -160,7 +160,7 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       <?php print render($page['content']); ?>
-    </section>
+    </div>
 
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="col-sm-3" role="complementary">
@@ -171,20 +171,20 @@
   </div>
   <?php if (!empty($page['content-bottom'])): ?>
     <div class="row">
-      <section class="col-sm-12">
+      <div class="col-sm-12">
         <?php print render($page['content-bottom']); ?>
-      </section>
+      </div>
     </div>
   <?php endif; ?>
 </div>
 <footer class="footer container">
-  <section class="col-md-4 col-sm-12">
+  <div class="col-md-4 col-sm-12">
     <?php print render($page['footer_left']); ?>
-  </section>
-  <section class="col-md-4 col-sm-6 col-xs-12">
+  </div>
+  <div class="col-md-4 col-sm-6 col-xs-12">
     <?php print render($page['footer_center']); ?>
-  </section>
-  <section class="col-md-4 col-sm-6 col-xs-12">
+  </div>
+  <div class="col-md-4 col-sm-6 col-xs-12">
     <?php print render($page['footer_right']); ?>
-  </section>
+  </div>
 </footer>
