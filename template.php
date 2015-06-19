@@ -125,7 +125,7 @@ function fleming_menu_link__menu_block__2(array $variables) {
     $element = $variables['element'];
     $sub_menu = '';
     $element['#attributes']['class'][] = 'list-group-item';
-  
+
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
     return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
@@ -135,6 +135,9 @@ function fleming_preprocess_image(&$variables) {
     if(isset($variables['style_name'])) {
         if($variables['style_name'] == 'gallery_cover_small') {
             $variables['attributes']['class'][] = "img-circle";
+        }
+        if($variables['style_name'] == 'node_gallery_thumbnail') {
+            $variables['attributes']['class'][] = "img-thumbnail";
         }
         if(isset($variables['attributes']['title'])) {
             $variables['attributes']['alt'] = $variables['attributes']['title'];
