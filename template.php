@@ -5,17 +5,13 @@
  * template.php
  */
 
-    /**
+/**
  * Add navbar classes to menu tree
  */
-function fleming_menu_tree($variables) {
+function fleming_menu_tree__main_menu($variables) {
        return '<ul class="nav navbar-nav">' . $variables['tree'] . '</ul>';
 }
-
-/**
- * Overrides theme_menu_link().
- */
-function fleming_menu_link(array $variables) {
+function fleming_menu_link__main_menu(array $variables) {
     $element = $variables['element'];
     $sub_menu = '';
 
@@ -61,35 +57,6 @@ function fleming_menu_link(array $variables) {
 function fleming_menu_tree__menu_block__1($variables) {
     return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 }
-/**
-function fleming_menu_link__menu_block__1(array $variables) {
-    $element = $variables['element'];
-    $sub_menu = '';
-
-    if ($element['#below']) {
-        // Add our own wrapper.
-        unset($element['#below']['#theme_wrappers']);
-        $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
-        // Generate as standard dropdown.
-        $element['#title'] .= ' <span class="caret"></span>';
-        $element['#attributes']['class'][] = 'dropdown';
-        $element['#localized_options']['html'] = TRUE;
-
-        // Set dropdown trigger element to # to prevent inadvertant page loading
-        // when a submenu link is clicked.
-        $element['#localized_options']['attributes']['data-target'] = '#';
-        $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
-        $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
-    }
-    // On primary navigation menu, class 'active' is not set on active menu item.
-    // @see https://drupal.org/node/1896674
-    if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
-        $element['#attributes']['class'][] = 'active';
-    }
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
-}
-*/
 function fleming_menu_link__menu_block__1(array $variables) {
     $element = $variables['element'];
     $sub_menu = '';
@@ -117,10 +84,6 @@ function fleming_menu_link__menu_block__1(array $variables) {
 function fleming_menu_tree__menu_block__2($variables) {
     return '<ul class="list-group">' . $variables['tree'] . '</ul>';
 }
-
-/**
- * Overrides theme_menu_link().
- */
 function fleming_menu_link__menu_block__2(array $variables) {
     $element = $variables['element'];
     $sub_menu = '';
@@ -129,6 +92,26 @@ function fleming_menu_link__menu_block__2(array $variables) {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
     return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+ * Add group classes to parents menublock
+ */
+function fleming_menu_tree__menu_block__3($variables) {
+    return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
+}
+function fleming_menu_tree__user_menu($variables) {
+    return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
+}
+
+/*function fleming_menu_link__menu_block__3(array $variables) {
+    $element = $variables['element'];
+    $sub_menu = '';
+    $element['#attributes']['class'][] = 'list-group-item';
+
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+    return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+*/
 
 // Add img-circle class to Video/Gallery Thumbnails and add Alt text to match Title
 function fleming_preprocess_image(&$variables) {
