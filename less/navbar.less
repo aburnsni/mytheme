@@ -1,12 +1,20 @@
 // main: style.less
 @border: 5px;
-@color1: #D1CEDD;
-@color2: #99BADD;
-@color3: #C4D8E2;
-@color4: #0072C6;
-@color5: #2DC6D6;
-@color6: #008C82;
+@color1: #a291c7;
+@color1fg: @gray-lighter;
+@color2: #3c75c6;
+@color2fg: @gray-lighter;
+@color3: #94c6df;
+@color3fg: @gray-dark;
+@color4: #0151c0;
+@color4fg: @gray-lighter;
+@color5: #2ac6d3;
+@color5fg: @gray-dark;
+@color6: #009ea1;
+@color6fg: @gray-lighter;
 @color7: #8f8;
+@color7fg: @gray-lighter;
+
 .navbar-nav > li > a {
     //  padding-left: 15px - @border;
     @media (min-width: @screen-sm-min) {
@@ -23,7 +31,7 @@
     }
     a {
         &:hover, &:focus {
-            color: #eee !important;
+            color: @color1fg !important;
             background: @color1 !important;
         }
     }
@@ -37,6 +45,7 @@
     }
     a {
         &:hover, &:focus {
+            color: @color2fg !important;
             background: @color2 !important;
         }
     }
@@ -50,7 +59,7 @@
     }
     a {
         &:hover, &:focus {
-            color: #eee !important;
+            color: @color3fg !important;
             background: @color3 !important;
         }
     }
@@ -64,6 +73,7 @@
     }
     a {
         &:hover, &:focus {
+            color: @color4fg !important;
             background: @color4 !important;
         }
     }
@@ -77,6 +87,7 @@
     }
     a {
         &:hover, &:focus {
+            color: @color5fg !important;
             background: @color5 !important;
         }
     }
@@ -90,6 +101,7 @@
     }
     a {
         &:hover, &:focus {
+            color: @color6fg !important;
             background: @color6 !important;
         }
     }
@@ -103,6 +115,7 @@
     }
     a {
         &:hover, &:focus {
+            color: @color7fg !important;
             background: @color7 !important;
         }
     }
