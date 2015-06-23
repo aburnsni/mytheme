@@ -144,12 +144,17 @@ function fleming_preprocess_page(&$variables) {
     if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
         $variables['content_column_class'] = ' class="col-sm-6 col-sm-pull-3"';
         $variables['sidebar_first_column_class'] = ' class="col-sm-3 col-sm-push-6"';
-        $variables['sidebar_second_column__class'] = ' class="col-sm-3"';
+        $variables['sidebar_second_column_class'] = ' class="col-sm-3"';
     }
-    elseif (!empty($variables['page']['sidebar_first']) || !empty($variables['page']['sidebar_second'])) {
+    elseif (!empty($variables['page']['sidebar_first']) && empty($variables['page']['sidebar_second'])) {
         $variables['content_column_class'] = ' class="col-sm-9 col-sm-pull-3"';
         $variables['sidebar_first_column_class'] = ' class="col-sm-3 col-sm-push-9"';
-        $variables['sidebar_second_column__class'] = ' class="col-sm-3"';
+        $variables['sidebar_second_column_class'] = ' class="col-sm-3"';
+    }
+    elseif (empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
+        $variables['content_column_class'] = ' class="col-sm-9"';
+        $variables['sidebar_first_column_class'] = ' class="col-sm-3"';
+        $variables['sidebar_second_column_class'] = ' class="col-sm-3"';
     }
     else {
         $variables['content_column_class'] = ' class="col-sm-12"';
