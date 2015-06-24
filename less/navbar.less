@@ -150,3 +150,10 @@
         background-color: #f7f7f7;
     }
 }
+
+// Hide Site Title for small screens
+.navbar-brand {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        display:none;
+    }
+}
