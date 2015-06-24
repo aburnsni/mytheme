@@ -41,7 +41,6 @@
  * @see template_preprocess_search_api_page_result()
  */
 ?>
-<?php if (isset($term_name)) { print $term_name; } else { print $title; }?>
 <li class="search-result">
   <h3 class="title">
    <?php print $url ? l($title, $url['path'], $url['options']) : check_plain($title); ?>
