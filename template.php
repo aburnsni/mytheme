@@ -161,8 +161,7 @@ function fleming_preprocess_page(&$variables) {
     }
 }
 
-function fleming_form_alter(&$form, &$form_state, $form_id) {
-    if ($form_id == 'imce_upload_form') {
+function fleming_form_imce_upload_form_alter(&$form, &$form_state, $form_id) {
         if (isset($form['fset_upload']['thumbnails'])) {
             $options = $form['fset_upload']['thumbnails']['#options'];
             foreach ($options as $key => $value) {
@@ -172,6 +171,4 @@ function fleming_form_alter(&$form, &$form_state, $form_id) {
             $form['fset_upload']['thumbnails']['#disabled'] = TRUE;
  //           $form['fset_upload']['thumbnails']['#attributes']['class'][] = 'hidden-form-item';
         }
-    }
 }
-
