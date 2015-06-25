@@ -3,7 +3,7 @@
 /**
  * Implements hook_panels_layouts()
  */
-function mytheme_2col_bricks_panels_layouts() {
+function fleming_admin_2col_bricks_panels_layouts() {
   $items['2col_bricks'] = array(
     'title' => t('2 column bricks'),
     'category' => t('Custom Layouts'),
