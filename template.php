@@ -173,8 +173,8 @@ function fleming_form_imce_upload_form_alter(&$form, &$form_state, $form_id) {
         }
 }
 
-function fleming_form_search_api_page_search_form_search_alter(&$form, &$form_state, $form_id) {
-//   print '<pre>';
+function fleming_form_alter(&$form, &$form_state, $form_id) {
+//  print '<pre>';
 //    print_r($form);
 //    print '</pre>';
 //    $form['keys_1']['#attributes']['placeholder'] = "Search...";
