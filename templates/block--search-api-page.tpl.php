@@ -1,4 +1,11 @@
 <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+      <?php print render($title_prefix); ?>
+<?php if ($block->subject): ?>
+  <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
+<?php endif;?>
+  <?php print render($title_suffix); ?>
+
+
 	<form action="/" method="post" id="<?php print $variables['block_html_id']; ?>" accept-charset="UTF-8">
 		<div class="input-group">
 			<input 	placeholder="Search..." class="form-control form-text" type="text" value="" 

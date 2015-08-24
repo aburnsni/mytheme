@@ -81,6 +81,7 @@ function fleming_menu_link__menu_block__1(array $variables) {
 /**
  * Add group classes to parents menublock
  */
+/*
 function fleming_menu_tree__menu_block__2($variables) {
     return '<ul class="list-group">' . $variables['tree'] . '</ul>';
 }
@@ -92,6 +93,17 @@ function fleming_menu_link__menu_block__2(array $variables) {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
     return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+*/
+function fleming_menu_tree__menu_block__2($variables) {
+    return '<div class="list-group">' . $variables['tree'] . '</div>';
+}
+function fleming_menu_link__menu_block__2(array $variables) {
+    $element = $variables['element'];
+    $element['#attributes']['class'][] = 'list-group-item';
+    $output = l($element['#title'], $element['#href'], array('attributes' => $element['#attributes']));
+    return $output . "\n";
+}
+
 
 /**
  * Add group classes to parents menublock
@@ -129,17 +141,6 @@ function fleming_preprocess_image(&$variables) {
 }
 
 function fleming_preprocess_page(&$variables) {
-    // Add gmaps js to front page
-    //  dpm (arg(0));
-    if($variables['is_front']) {
-        drupal_add_js('https://maps.googleapis.com/maps/api/js?v=3.exp');
-        drupal_add_js(drupal_get_path('theme', 'fleming') . '/js/gmap-block.js');
-    }
-    else if(arg(0)=='contact_us') {
-        drupal_add_js('https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true');
-        drupal_add_js(drupal_get_path('theme', 'fleming') . '/js/gmap-large.js');
-    }
-
     // Set column widths
     if (!empty($variables['page']['sidebar_first']) && !empty($variables['page']['sidebar_second'])) {
         $variables['content_column_class'] = ' class="col-sm-6 col-sm-pull-3"';
