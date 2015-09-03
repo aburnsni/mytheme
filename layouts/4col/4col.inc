@@ -3,7 +3,7 @@
 /**
  * Implements hook_panels_layouts()
  */
-function mytheme_4col_panels_layouts() {
+function bethany_boot_4col_panels_layouts() {
   $items['4col'] = array(
     'title' => t('4 column'),
     'category' => t('Custom Layouts'),

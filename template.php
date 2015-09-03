@@ -4,7 +4,7 @@
  * @file
  * template.php
  */
-function mytheme_menu_tree($variables) {
+function bethany_boot_menu_tree($variables) {
    return '<ul class="nav navbar-nav">' . $variables['tree'] . '</ul>';
 }
 
@@ -12,7 +12,7 @@ function mytheme_menu_tree($variables) {
 /**
  * Overrides theme_menu_link().
  */
-function mytheme_menu_link(array $variables) {
+function bethany_boot_menu_link(array $variables) {
   $element = $variables['element'];
   $sub_menu = '';
 
