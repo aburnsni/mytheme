@@ -1,3 +1,6 @@
+img {
+  padding: 10px;
+}
 [data-picture-align="left"] {
   float:left;
 }
