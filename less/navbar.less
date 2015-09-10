@@ -145,15 +145,44 @@
     font-size: 0.7em;
   }
 }
-#block-menu-block-3, #block-system-user-menu {
-    li {
-        background-color: #f7f7f7;
-    }
+
+//To fix admin menu backgrounds
+#block-menu-block-3, #block-system-user-menu, #block-block-7 {
+//    li {
+//        background-color: #f7f7f7;
+//    }
+  ul {
+    background-color: rgba(127,127,127,0.1);
+  }
 }
 
 // Hide Site Title for small screens
 .navbar-brand {
+    @media (max-width: @screen-xs) {
+        font-size: @font-size-base;
+    }
     @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
         display:none;
     }
+}
+
+.nav-stacked {
+  .dropdown-menu {
+    position: relative;
+    float:none;
+    z-index: 0;
+    min-width: 10px;
+    padding-left: 10px;
+    margin: 0px;
+    background: inherit;
+    border: inherit;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+
+    li a {
+      color: inherit;
+      white-space: normal;
+    }
+  }
 }
