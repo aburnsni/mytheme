@@ -8,6 +8,7 @@
 
 	<form action="/" method="post" id="<?php print $variables['block_html_id']; ?>" accept-charset="UTF-8">
 		<div class="input-group">
+			<label for="<?php print $variables['elements']['keys_1']['#id']; ?>" class="hidden">Search</label>
 			<input 	placeholder="Search..." class="form-control form-text" type="text" value="" 
 					id="<?php print $variables['elements']['keys_1']['#id']; ?>" 
 					name="<?php print $variables['elements']['keys_1']['#name']; ?>" 
