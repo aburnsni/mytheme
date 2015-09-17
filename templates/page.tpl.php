@@ -83,8 +83,8 @@
       <?php endif; ?>
 
       <?php if (!empty($site_name)): ?>
-      <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
+       <a class="name navbar-brand" href="#<?php //print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+     <?php endif; ?>
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navbar-collapse">
@@ -144,10 +144,7 @@
             <a id="main-content"></a>
             <?php print render($title_prefix); ?>
             <?php if (!empty($title)): ?>
-                <h1 class="page-header"><?php
-		          $title_enc = html_entity_decode($title, ENT_QUOTES);
-		          print $title_enc;
-	           ?></h1>
+                <h1 class="page-header"><?php print $title;?></h1>
             <?php endif; ?>
             <?php print render($title_suffix); ?>
             <?php print $messages; ?>
