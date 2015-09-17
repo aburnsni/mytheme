@@ -148,11 +148,11 @@
 
 //To fix admin menu backgrounds
 #block-menu-block-3, #block-system-user-menu, #block-block-7 {
-//    li {
-//        background-color: #f7f7f7;
-//    }
   ul {
     background-color: rgba(127,127,127,0.1);
+  }
+  ul.hybridauth-widget {
+    background-color: transparent;
   }
 }
 
@@ -166,11 +166,12 @@
     }
 }
 
+// navbar dropdown fixes
 .nav-stacked {
   .dropdown-menu {
     position: relative;
     float:none;
-    z-index: 0;
+//    z-index: 0;
     min-width: 10px;
     padding-left: 10px;
     margin: 0px;
@@ -179,10 +180,15 @@
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-
-    li a {
-      color: inherit;
-      white-space: normal;
+    li {
+      a {
+        color: #337ab7;
+        white-space: normal;
+        &:hover, &:focus {
+          background-color: #eee;
+          color: #23527c;
+        }
+      }
     }
   }
 }
