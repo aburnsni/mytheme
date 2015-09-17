@@ -54,10 +54,10 @@ function fleming_menu_link__main_menu(array $variables) {
 /**
  * Add group classes to departments submnenu
  */
-function fleming_menu_tree__menu_block__1($variables) {
+function fleming_menu_tree__menu_block__15($variables) {
     return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 }
-function fleming_menu_link__menu_block__1(array $variables) {
+function fleming_menu_link__menu_block__15(array $variables) {
     $element = $variables['element'];
     $sub_menu = '';
 
@@ -78,12 +78,13 @@ function fleming_menu_link__menu_block__1(array $variables) {
     return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . "</li>\n";
 }
 
-function fleming_menu_tree__menu_block__5($variables) {
+function fleming_menu_tree__menu_block__1($variables) {
        return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 }
-function fleming_menu_link__menu_block__5(array $variables) {
- $element = $variables['element'];
+function fleming_menu_link__menu_block__1(array $variables) {
+  $element = $variables['element'];
   $sub_menu = '';
+
  
   if ($element['#below']) {
     // Prevent dropdown functions from being added to management menu so it
@@ -97,7 +98,7 @@ function fleming_menu_link__menu_block__5(array $variables) {
       unset($element['#below']['#theme_wrappers']);
       $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
       // Generate as standard dropdown.
-      $element['#title'] .= ' <span class="caret"></span>'; //Smartmenus plugin add's caret
+      $element['#title'] .= ' <span class="caret"></span>';
       $element['#attributes']['class'][] = 'dropdown';
       $element['#localized_options']['html'] = TRUE;
  
@@ -211,17 +212,6 @@ function fleming_preprocess_page(&$variables) {
     }
 }
 
-//function fleming_form_imce_upload_form_alter(&$form, &$form_state, $form_id) {
-//        if (isset($form['fset_upload']['thumbnails'])) {
-//            $options = $form['fset_upload']['thumbnails']['#options'];
-//            foreach ($options as $key => $value) {
-//                $default_value[$key] = $key;
-//            };
-//            $form['fset_upload']['thumbnails']['#default_value'] = $default_value;
-//            $form['fset_upload']['thumbnails']['#disabled'] = TRUE;
-//        }
-//}
-
 function fleming_form_alter(&$form, &$form_state, $form_id) {
 //  print '<pre>';
 //    print_r($form);
@@ -260,9 +250,7 @@ function fleming_field__field_department(&$variables) {
   return $output;
 }
 
-
-// Fix calendar display
-
+// Override calendar title display
 function fleming_date_nav_title($params) {
     $granularity = $params['granularity'];
     $view = $params['view'];
@@ -300,3 +288,12 @@ function fleming_date_nav_title($params) {
         return $title;
     }
 }
+
+function fleming_username_alter(&$name, $account) {
+  // Display the user's uid instead of name.
+  //if (isset($account->uid)) {
+  //  $name = t('User !uid', array('!uid' => $account->uid));
+  //}
+  $name = html_entity_decode($account->name, ENT_QUOTES);
+}
+
