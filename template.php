@@ -175,7 +175,7 @@ function fleming_preprocess_image(&$variables) {
         if($variables['style_name'] == 'node_gallery_thumbnail') {
             $variables['attributes']['class'][] = "img-thumbnail";
         }
-        if(isset($variables['attributes']['title'])) {
+        if(isset($variables['attributes']['title']) && !$variables['attributes']['alt']) {
             $variables['attributes']['alt'] = $variables['attributes']['title'];
         }
     }
