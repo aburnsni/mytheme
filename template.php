@@ -54,30 +54,6 @@ function fleming_menu_link__main_menu(array $variables) {
 /**
  * Add group classes to departments submnenu
  */
-function fleming_menu_tree__menu_block__15($variables) {
-    return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
-}
-function fleming_menu_link__menu_block__15(array $variables) {
-    $element = $variables['element'];
-    $sub_menu = '';
-
-    if ($element['#below']) {
-        // Add our own wrapper.
-        unset($element['#below']['#theme_wrappers']);
-        // Generate as standard dropdown.
-        $element['#title'] .= ' <span class="glyphicon glyphicon-triangle-right"></span>';
-        $element['#attributes']['class'][] = 'dropdown';
-        $element['#localized_options']['html'] = TRUE;
-    }
-    // On primary navigation menu, class 'active' is not set on active menu item.
-    // @see https://drupal.org/node/1896674
-    if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
-        $element['#attributes']['class'][] = 'active';
-    }
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . "</li>\n";
-}
-
 function fleming_menu_tree__menu_block__1($variables) {
        return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 }
@@ -122,19 +98,6 @@ function fleming_menu_link__menu_block__1(array $variables) {
 /**
  * Add group classes to parents menublock
  */
-/*
-function fleming_menu_tree__menu_block__2($variables) {
-    return '<ul class="list-group">' . $variables['tree'] . '</ul>';
-}
-function fleming_menu_link__menu_block__2(array $variables) {
-    $element = $variables['element'];
-    $sub_menu = '';
-    $element['#attributes']['class'][] = 'list-group-item';
-
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
-}
-*/
 function fleming_menu_tree__menu_block__2($variables) {
     return '<div class="list-group">' . $variables['tree'] . '</div>';
 }
@@ -147,26 +110,20 @@ function fleming_menu_link__menu_block__2(array $variables) {
 
 
 /**
- * Add group classes to parents menublock
+ * Add group classes to Add Content menublock
  */
 function fleming_menu_tree__menu_block__3($variables) {
     return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 }
+/**
+ * Add group classes to User menublock
+ */
 function fleming_menu_tree__user_menu($variables) {
     return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
 }
 
-/*function fleming_menu_link__menu_block__3(array $variables) {
-    $element = $variables['element'];
-    $sub_menu = '';
-    $element['#attributes']['class'][] = 'list-group-item';
 
-    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
-}
-*/
-
-// Add img-circle class to Video/Gallery Thumbnails and add Alt text to match Title
+// Add img-circle class to Video/Gallery Thumbnails and add Alt text to match Title (if it doesnt't aleady exist)
 function fleming_preprocess_image(&$variables) {
     if(isset($variables['style_name'])) {
         if($variables['style_name'] == 'gallery_cover_small') {
@@ -220,7 +177,7 @@ function fleming_form_alter(&$form, &$form_state, $form_id) {
 }
 
 /*
-** Alter rendering of taxonomt terms
+** Alter rendering of taxonomy terms
 */
 /**
  * Implements theme_field__field_tags().
