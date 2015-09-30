@@ -40,7 +40,7 @@ function initialize() {
         },
         map = new google.maps.Map(document.getElementById('map-canvas-block'), mapOptions),
         marker = new google.maps.Marker({
-            icon: 'http://maps.google.com/mapfiles/ms/micons/blue-dot.png',
+            icon: 'https://maps.google.com/mapfiles/ms/micons/blue-dot.png',
             position: myLatlng,
             map: map,
             title: 'Fleming Fulton School',
