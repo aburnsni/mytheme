@@ -72,7 +72,8 @@ function fleming_menu_link__menu_block__1(array $variables) {
     elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] >= 1)) {
       // Add our own wrapper.
       unset($element['#below']['#theme_wrappers']);
-      $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
+        $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+      $sub_menu = '<ul class="dropdown-menu">' . '<li' . drupal_attributes($element['#attributes']) . '>' . $output . '</li>' . drupal_render($element['#below']) . '</ul>';
       // Generate as standard dropdown.
       $element['#title'] .= ' <span class="caret"></span>';
       $element['#attributes']['class'][] = 'dropdown';
