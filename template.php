@@ -108,14 +108,26 @@ function fleming_menu_link__menu_block__2(array $variables) {
     $output = l($element['#title'], $element['#href'], array('attributes' => $element['#attributes']));
     return $output . "\n";
 }
+/**
+ * Add group classes to "Add Content" menublock
+ */
+function fleming_menu_tree__menu_block__3($variables) {
+    return '<div class="list-group">' . $variables['tree'] . '</div>';
+}
+function fleming_menu_link__menu_block__3(array $variables) {
+    $element = $variables['element'];
+    $element['#attributes']['class'][] = 'list-group-item';
+    $output = l($element['#title'], $element['#href'], array('attributes' => $element['#attributes']));
+    return $output . "\n";
+}
 
 
 /**
  * Add group classes to Add Content menublock
  */
-function fleming_menu_tree__menu_block__3($variables) {
-    return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
-}
+//function fleming_menu_tree__menu_block__3($variables) {
+//    return '<ul class="nav nav-pills nav-stacked">' . $variables['tree'] . '</ul>';
+//}
 /**
  * Add group classes to User menublock
  */
@@ -167,6 +179,13 @@ function fleming_preprocess_page(&$variables) {
     }
     elseif ($header == "403 Forbidden") {
       $variables['theme_hook_suggestions'][] = 'page__403';
+    }
+
+    //  Update hook_suggestions for Audio Files
+    if (isset($variables['node']->type)) {
+    // If the content type's machine name is "my_machine_name" the file
+    // name will be "page--my-machine-name.tpl.php".
+      $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
     }
 }
 
