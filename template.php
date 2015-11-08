@@ -55,7 +55,7 @@ function fleming_admin_menu_link(array $variables) {
 
 // Add gmaps js to front page
 
-function fleming_preprocess_page(&$vars)
+function fleming_admin_preprocess_page(&$vars)
 {
   //  dpm (arg(0));
   if($vars['is_front']) {

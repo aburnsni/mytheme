@@ -1,57 +1,5 @@
 // main: ./style.less
-.bg-img(@img) {	background-image: url("@{img}");
-		background-repeat: no-repeat;
-		background-position: top left;
-		background-size: 100%; }
-
-body { #gradient.vertical(#a1dbff; #f0f9ff;); }
-#content-wrapper { .bg-img("../images/birdst.png"); }
-
-
-#page-header {
-  background-position: center center;
-  background-repeat:no-repeat;
-  /* rules for mobile vertical (< 480) */
-  background-image:url("http://placehold.it/432x114");
-  height:114px;
-
-  @media (min-width: @screen-xs-min) {
-     /* rules for tablet (768 > 992) */
-    background-image:url("http://placehold.it/720x189");
-    height:189px;
-  }
-  @media (min-width: @screen-md-min) {
-     /* rules for desktop (992 > 1200) */
-    background-image:url("http://placehold.it/940x247");
-    height:247px;
-  }
-  @media (min-width: @screen-lg-min) {
-     /* rules for large (> 1200) */
-    background-image:url("http://placehold.it/1140x300");
-    height:300px;
-  }
-}
-
-/* Remove background for calendar for/next blocks */
-.view .date-nav-wrapper{
-  .date-prev, .date-next {
-    background:none;
-  }
-}
-
-#map-canvas-block {
-  width: 100%;
-  height: 200px;
-}
-
-#map-canvas-large {
-  width: 100%;
-  height: 300px;
-}
-#routeForm {
-    padding: @padding-large-vertical 0;
-}
-
+body { #gradient.vertical(#ffa1db; #fff0f9;); }
 
 // Fix wrong placement of checkboxes
 
