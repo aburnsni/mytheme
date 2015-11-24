@@ -11,7 +11,6 @@
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
@@ -24,12 +23,11 @@
     <?php print $page_bottom; ?>
   </div>
 <script>
-var myLatlng = new google.maps.LatLng(54.55663, -5.964576);
 
 function initialize() {
     "use strict";
-
-    var mapOptions = {
+    var myLatlng = new google.maps.LatLng(54.55663, -5.964576),
+        mapOptions = {
             zoom: 15,
             center: myLatlng,
             draggable: 0,
@@ -53,7 +51,8 @@ function initialize() {
 
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+// google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+<script async src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;callback=initialize" defer></script>
 </body>
 </html>
