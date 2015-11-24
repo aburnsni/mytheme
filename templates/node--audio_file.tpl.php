@@ -1,10 +1,3 @@
-<?php
-
-/**
- * @file
- * Default theme implementation to display a node.
- */
-?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print $user_picture; ?>

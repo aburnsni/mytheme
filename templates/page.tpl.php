@@ -1,15 +1,9 @@
-<?php
-/**
- * @file
- * Default theme implementation to display a single Drupal page.
- */
-?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
     <div class="navbar-header">
       <?php if ($logo): ?>
       <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        <img src="<?php print $logo; ?>" alt="<?php print t('Return to Homepage'); ?>" />
       </a>
       <?php endif; ?>
 
@@ -89,7 +83,7 @@
                 <ul class="action-links"><?php print render($action_links); ?></ul>
             <?php endif; ?>
             <?php print render($page['content']); ?>
-        </div>    
+        </div>
     </div>
 
     <?php if (!empty($page['sidebar_second'])): ?>
