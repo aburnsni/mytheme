@@ -4,7 +4,7 @@
     <h2<?php print $title_attributes; ?>><?php print $block->subject ?></h2>
   <?php endif;?>
   <?php print render($title_suffix); ?>
-  <form action="/" method="post" id="<?php print $variables['block_html_id']; ?>" accept-charset="UTF-8">
+  <form action="/" method="post" id="<?php print $variables['block_html_id']; ?>-form" accept-charset="UTF-8">
     <div class="input-group">
       <label for="<?php print $variables['elements']['keys_1']['#id']; ?>" class="hidden">Search</label>
       <input 	placeholder="Search..." class="form-control form-text" type="text" value="" 
