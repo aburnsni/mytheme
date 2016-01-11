@@ -1,0 +1,75 @@
+// main: ../style.less
+// Calendar
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .week-view .full td.single-day div.weekview,
+.calendar-calendar .day-view .full td.single-day div.dayview {
+    background: #0151c0;
+    > .contents {
+        padding: 2px;
+    }
+    a {
+        color: @gray-lighter;
+    }
+}
+.calendar-calendar .month-view .full td.multi-day div.monthview,
+.calendar-calendar .week-view .full td.multi-day div.weekview,
+.calendar-calendar .day-view .full td.multi-day div.dayview {
+    background: #0151c0;
+    > .contents {
+        padding: 2px;
+    }
+    > .cutoff {
+        background: #0151c0 !important;
+    }
+    a {
+        color: @gray-lighter;
+    }
+}
+
+// Remove background for calendar for-next blocks
+.view .date-nav-wrapper {
+    .date-nav {
+        padding-bottom: 0;
+        .pager {
+            margin: 10px 0;
+            .date-prev, .date-next {
+                background: none;
+            }
+            .date-prev {
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+}
+
+#flexslider-1 {
+    .views-field {
+        padding: 10px 0;
+    }
+}
+
+//Frontpage carousel
+.views-bootstrap-carousel-plugin-style {
+  margin-bottom: 35px;
+  background-color: @body-bg;
+  border: 1px solid @table-border-color;
+  border-radius: @border-radius-base;
+  padding: 10px 15px;
+  .carousel-indicators {
+    bottom: -40px;
+    li {
+      background-color: @gray-light;
+      border-color: @gray-light;
+      &.active {
+        background-color: @gray-dark;
+        border-color: @gray-dark;
+      }
+    }
+  }
+  .node {
+    .list-inline {
+      margin-left:0;
+    }
+  }
+}

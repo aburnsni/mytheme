@@ -1,0 +1,115 @@
+// main: ../style.less
+ol.breadcrumb {
+    background-color: #fff;
+}
+
+.view-display-id-block_1 {
+    .attachment-after {
+        padding-top: 15px;
+    }
+}
+
+.pane-taxonomy-items-panel-pane-3,
+.pane-taxonomy-items-panel-pane-4 {
+    .media {
+        margin-top: 0;
+        .media-left .img-responsive {
+            max-width:inherit;
+        }
+    }
+}
+
+// Gallery
+#views-bootstrap-grid-1 {
+    >div {
+        >div {
+            text-align: center;
+            h3 {
+                font-size: @font-size-h4;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+#imce-content {
+    .radio label, .checkbox label {
+        padding-left:20px;
+    }
+}
+
+// Fix wrong placement of checkboxes
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+	margin-left: 0;
+}
+
+// Correct link color when used within btn
+.btn-primary {
+  margin-left: @padding-small-horizontal;
+  &.first {
+    margin-left: 0;
+  }
+  a {
+    color: @gray-lighter;
+  }
+}
+
+// Correct Search title spacing
+#block-search-api-page-search {
+    .block-title {
+        margin-top:20px;
+    }
+}
+
+// Add padding to node images
+.node {
+  .field-name-body {
+    img {
+      padding: 10px;
+    }
+  }
+}
+
+//hybridauth block
+.hybridauth-widget-wrapper {
+  h3 {
+    float:left;
+    margin:0;
+    padding-right: 10px;
+  }
+}
+
+// Unpublished nodes
+.node-unpublished {
+  background-color: #fdd;
+}
+
+// Read Counts
+.statistics_counter {
+  &.first span{
+    padding-left: 5px;
+  }
+}
+
+//  Audio controls max-width
+audio, video {
+  max-width: 100%;
+}
+video {
+  height: auto;
+}
+
+//  Align News block - more text
+.view-id-latest {
+  .more-link {
+    text-align:right;
+  }
+}
+
+// Fix width of flyer thumbnails
+.flyer {
+  img {
+    max-width:100%;
+  }
+}

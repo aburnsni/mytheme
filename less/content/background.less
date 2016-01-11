@@ -1,0 +1,17 @@
+// main: ../style.less
+.bg-img(@img) {
+    background-image: url("@{img}");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+}
+
+body {
+    #gradient.vertical(#2ac6d3;
+    #f0f9ff;
+    );
+}
+
+#content-wrapper {
+    .bg-img("../images/birdst.png");
+}
