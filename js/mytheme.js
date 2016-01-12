@@ -47,5 +47,8 @@ jQuery(function ($) {
             //Set navbar drop down on hover
             $('.navbar #main-navbar .dropdown').hover(mouseOver, mouseOut);
         }
+
+        //Hide required mark from masquerade form
+        $('#masquerade-block-1 label').addClass("sr-only");
     });
 });
