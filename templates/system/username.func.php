@@ -1,8 +1,9 @@
-<?php/**
+<?php
+/**
  * @file
  * Stub file for username_alter() and suggestion(s).
  */
- 
+
 function fleming_username_alter(&$name, $account) {
   // Display the user's uid instead of name.
   //if (isset($account->uid)) {
