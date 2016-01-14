@@ -7,7 +7,7 @@
         <div class="flyer-title">
           <header><h3><?php print $title; ?></h3></header>
         </div>
-      </a> 
+      </a>
       <?php
         if (drupal_valid_path('node/' . $node->nid . '/edit')) {
           print l('Edit', 'node/' . $node->nid . '/edit');

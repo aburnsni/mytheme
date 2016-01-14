@@ -64,7 +64,7 @@ function fleming_menu_link__menu_block__1(array $variables) {
       $element['#title'] .= ' <span class="caret"></span>';
       $element['#attributes']['class'][] = 'dropdown';
       $element['#localized_options']['html'] = TRUE;
- 
+
       // Set dropdown trigger element to # to prevent inadvertant page loading
       // when a submenu link is clicked.
       $element['#localized_options']['attributes']['data-target'] = '#';

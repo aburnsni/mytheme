@@ -3,7 +3,7 @@
  * @file
  * Stub file for bootstrap_field()
  */
- 
+
 /*
 ** Alter rendering of taxonomy terms
 */

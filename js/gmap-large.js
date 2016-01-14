@@ -62,7 +62,7 @@ function initialize() {
         var widgetDiv = document.getElementById('save-widget');
         saveWidget = new google.maps.SaveWidget(widgetDiv, saveWidgetOptions);
     });
-    
+
     directionsDisplay = new google.maps.DirectionsRenderer();
     directionsDisplay.setMap(map);
     directionsDisplay.setPanel(document.getElementById("directionsPanel"));

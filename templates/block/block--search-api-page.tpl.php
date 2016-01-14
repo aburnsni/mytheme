@@ -7,10 +7,10 @@
   <form action="/" method="post" id="<?php print $variables['block_html_id']; ?>-form" accept-charset="UTF-8">
     <div class="input-group">
       <label for="<?php print $variables['elements']['keys_1']['#id']; ?>" class="hidden">Search</label>
-      <input 	placeholder="Search..." class="form-control form-text" type="text" value="" 
-					id="<?php print $variables['elements']['keys_1']['#id']; ?>" 
-					name="<?php print $variables['elements']['keys_1']['#name']; ?>" 
-					size="<?php print $variables['elements']['keys_1']['#size']; ?>" 
+      <input placeholder="Search..." class="form-control form-text" type="text" value=""
+					id="<?php print $variables['elements']['keys_1']['#id']; ?>"
+					name="<?php print $variables['elements']['keys_1']['#name']; ?>"
+					size="<?php print $variables['elements']['keys_1']['#size']; ?>"
 					maxlength="<?php print $variables['elements']['keys_1']['#maxlength']; ?>" />
       <span class="input-group-btn">
         <button type="submit" class="btn btn-default form-submit" id="edit-submit-1" name="op" >

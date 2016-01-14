@@ -1,6 +1,6 @@
 <?php
 /**
- * @file 
+ * @file
  * Template to display the date box in a calendar.
  *
  * - $view: The view.

@@ -1,8 +1,9 @@
-<?php/**
+<?php
+/**
  * @file
  * Stub file for bootstrap_date().
  */
- 
+
 // Override calendar title display
 function fleming_date_nav_title($params) {
     $granularity = $params['granularity'];
