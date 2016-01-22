@@ -203,6 +203,11 @@ ol.breadcrumb {
 }
 
 //  Audio controls max-width
+.field-name-field-videos {
+  text-align:center;
+  padding-top:10px;
+}
+
 audio, video {
   max-width: 100%;
 }
@@ -221,5 +226,28 @@ video {
 .flyer {
   img {
     max-width:100%;
+  }
+}
+
+// Theme tweets page into 2 columns
+.view-display-id-block .more-link {
+  text-align:right;
+}
+
+@media (min-width: @screen-sm-min) {
+  .view-display-id-page_2 .view-content ul {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+  }
+}
+
+// TWitter Panel
+.pane-twitter-block-1, #ye-panel {
+  .pane-title {
+    display:none;
   }
 }
