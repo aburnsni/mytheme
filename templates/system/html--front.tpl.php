@@ -53,6 +53,6 @@ function initialize() {
 
 // google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-<script async src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;callback=initialize" defer></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWAUy3JqJjNOCj6TUVOQIuJtCNOypzdQk&v=3.exp&amp;callback=initialize" defer></script>
 </body>
 </html>
