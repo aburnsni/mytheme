@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"<?php print $rdf_namespaces;?>>
 <head <?php print $rdf_namespaces; ?>>
+<meta name="google-site-verification" content="qZH8TDWqCFrU5xKP9uOzocAQUAxPqzMnhfHqz5c7AOg" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,6 +54,6 @@ function initialize() {
 
 // google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWAUy3JqJjNOCj6TUVOQIuJtCNOypzdQk&v=3.exp&amp;callback=initialize" defer></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYOcSOCi__DSWg6jJvKdex1A8cKBM_iI0&v=3.exp&amp;callback=initialize" defer></script>
 </body>
 </html>
