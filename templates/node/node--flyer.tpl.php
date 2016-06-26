@@ -19,12 +19,24 @@
       <div class="col-sm-4">
         <div class="flyer">
         <a class="colorbox-load" href="<?php print file_create_url($node->field_image['und'][0]['uri']); ?>"
-          title="<?php print $title; ?>">
+          data-colorbox-gallery="gallery-node-<?php print $node->nid; ?>" title="<?php print $title; ?>">
           <img src="<?php print image_style_url('large',$node->field_image['und'][0]['uri']); ?>">
         </a>
         </div>
       </div>
-      <div class="col-sm-8">
+      <?php if ($node->field_image['und'][1]['uri']) { ?>
+        <div class="col-sm-4">
+          <div class="flyer">
+          <a class="colorbox-load" href="<?php print file_create_url($node->field_image['und'][1]['uri']); ?>"
+            data-colorbox-gallery="gallery-node-<?php print $node->nid; ?>" title="<?php print $title; ?>">
+            <img src="<?php print image_style_url('large',$node->field_image['und'][1]['uri']); ?>">
+          </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+      <?php } else { ?>
+        <div class="col-sm-8">
+      <?php } ?>
         <?php if ($node->body): ?>
           <div><?php print render($node->body['und'][0]['value']); ?></div>
         <?php endif; ?>
